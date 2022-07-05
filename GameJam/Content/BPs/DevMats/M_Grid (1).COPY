@@ -1,0 +1,103 @@
+Begin Object Class=/Script/Engine.Material Name="M_Grid"
+   Begin Object Class=/Script/UnrealEd.SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionWorldPosition Name="MaterialExpressionWorldPosition_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionVectorParameter Name="MaterialExpressionVectorParameter_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionTextureObject Name="MaterialExpressionTextureObject_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMultiply Name="MaterialExpressionMultiply_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMaterialFunctionCall Name="MaterialExpressionMaterialFunctionCall_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionConstant Name="MaterialExpressionConstant_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionConstant Name="MaterialExpressionConstant_0"
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   Begin Object Name="MaterialExpressionWorldPosition_0"
+      MaterialExpressionEditorX=-512
+      MaterialExpressionEditorY=176
+      MaterialExpressionGuid=E407321A450B7895D125409CF143D5D7
+      Material=Material'"M_Grid"'
+   End Object
+   Begin Object Name="MaterialExpressionVectorParameter_0"
+      DefaultValue=(R=0.718750,G=0.718750,B=0.718750,A=0.000000)
+      ParameterName="Color"
+      ExpressionGUID=7FF6E0E348047BBDC9AF52B4AC0C5B03
+      MaterialExpressionEditorX=-64
+      MaterialExpressionEditorY=240
+      MaterialExpressionGuid=5748F80A4ACF9C9CC4BFCAB7661EBD90
+      Material=Material'"M_Grid"'
+   End Object
+   Begin Object Name="MaterialExpressionTextureObject_0"
+      Texture=Texture2D'"/Game/Materials/M_Grid/T_Grid.T_Grid"'
+      MaterialExpressionEditorX=-464
+      MaterialExpressionEditorY=-32
+      MaterialExpressionGuid=954474AB4FB9B0AB079AE48F9A1C7EA1
+      Material=Material'"M_Grid"'
+   End Object
+   Begin Object Name="MaterialExpressionMultiply_0"
+      A=(Expression=MaterialExpressionMaterialFunctionCall'"M_Grid:MaterialExpressionMaterialFunctionCall_0"',OutputIndex=2)
+      B=(Expression=MaterialExpressionVectorParameter'"M_Grid:MaterialExpressionVectorParameter_0"',Mask=1,MaskR=1,MaskG=1,MaskB=1)
+      MaterialExpressionEditorX=160
+      MaterialExpressionEditorY=80
+      MaterialExpressionGuid=359C6FD547820DFB712A7990F7AB0D79
+      Material=Material'"M_Grid"'
+   End Object
+   Begin Object Name="MaterialExpressionMaterialFunctionCall_0"
+      MaterialFunction=MaterialFunction'"/Engine/Functions/Engine_MaterialFunctions01/Texturing/WorldAlignedTexture.WorldAlignedTexture"'
+      FunctionInputs(0)=(ExpressionInputId=4EE64DD049AC714D089AD6AAB1BFA0C8,Input=(Expression=MaterialExpressionTextureObject'"M_Grid:MaterialExpressionTextureObject_0"',InputName="TextureObject"))
+      FunctionInputs(1)=(ExpressionInputId=2C710AD6489D7B7213E379AD4846EBBB,Input=(Expression=MaterialExpressionConstant'"M_Grid:MaterialExpressionConstant_0"',InputName="TextureSize"))
+      FunctionInputs(2)=(ExpressionInputId=F9CEA7574004FF6704D0C5B341DB8F50,Input=(Expression=MaterialExpressionWorldPosition'"M_Grid:MaterialExpressionWorldPosition_0"',InputName="WorldPosition"))
+      FunctionInputs(3)=(ExpressionInputId=041C58BB4D6D46D766DE40A41673ECD6,Input=(OutputIndex=-1,InputName="Export Float 4"))
+      FunctionInputs(4)=(ExpressionInputId=ABB498D643904DF08C37A0B911766DDB,Input=(OutputIndex=-1,InputName="World Space Normal"))
+      FunctionInputs(5)=(ExpressionInputId=D2134BC94ED09D2F619E9DBED3E550CD,Input=(OutputIndex=-1,InputName="ProjectionTransitionContrast"))
+      FunctionOutputs(0)=(ExpressionOutputId=C73948F34CBC303FB1D8F3A99E6B0324,Output=(OutputName="XY Texture"))
+      FunctionOutputs(1)=(ExpressionOutputId=DC35E13448C6765AA54072B08874BFD4,Output=(OutputName="Z Texture"))
+      FunctionOutputs(2)=(ExpressionOutputId=1B6AC1E04D115FD30866E4A895261285,Output=(OutputName="XYZ Texture"))
+      MaterialExpressionEditorX=-224
+      MaterialExpressionEditorY=32
+      MaterialExpressionGuid=B37E0C64478EE28676851BB2F35395AE
+      Material=Material'"M_Grid"'
+      Outputs(0)=(OutputName="XY Texture")
+      Outputs(1)=(OutputName="Z Texture")
+      Outputs(2)=(OutputName="XYZ Texture")
+   End Object
+   Begin Object Name="MaterialExpressionConstant_1"
+      R=0.500000
+      MaterialExpressionEditorX=272
+      MaterialExpressionEditorY=176
+      MaterialExpressionGuid=61995BDC441112FE88DA5387BC179F45
+      Material=Material'"M_Grid"'
+   End Object
+   Begin Object Name="MaterialExpressionConstant_0"
+      R=100.000000
+      MaterialExpressionEditorX=-416
+      MaterialExpressionEditorY=112
+      MaterialExpressionGuid=0DB8C8284D86B9CECFFD74B32BCB23A7
+      Material=Material'"M_Grid"'
+   End Object
+   BaseColor=(Expression=MaterialExpressionMultiply'"MaterialExpressionMultiply_0"')
+   Roughness=(Expression=MaterialExpressionConstant'"MaterialExpressionConstant_1"')
+   bUsedWithStaticLighting=True
+   EditorX=384
+   EditorY=80
+   Expressions(0)=MaterialExpressionMultiply'"MaterialExpressionMultiply_0"'
+   Expressions(1)=MaterialExpressionConstant'"MaterialExpressionConstant_1"'
+   Expressions(2)=MaterialExpressionTextureObject'"MaterialExpressionTextureObject_0"'
+   Expressions(3)=MaterialExpressionConstant'"MaterialExpressionConstant_0"'
+   Expressions(4)=MaterialExpressionMaterialFunctionCall'"MaterialExpressionMaterialFunctionCall_0"'
+   Expressions(5)=MaterialExpressionWorldPosition'"MaterialExpressionWorldPosition_0"'
+   Expressions(6)=MaterialExpressionVectorParameter'"MaterialExpressionVectorParameter_0"'
+   ParameterGroupData(0)=(GroupName="None")
+   bCanMaskedBeAssumedOpaque=True
+   StateId=C8D5F6BB480CB22C8E11E987290EA876
+   CachedExpressionData=(Parameters=(RuntimeEntries[1]=(NameHashes=(12279385124011487613),ParameterInfos=((Name="Color")),ExpressionGuids=(7FF6E0E348047BBDC9AF52B4AC0C5B03)),VectorValues=((R=0.718750,G=0.718750,B=0.718750,A=0.000000)),VectorChannelNameValues=(()),VectorUsedAsChannelMaskValues=(False)),ReferencedTextures=(Texture2D'"/Game/Materials/M_Grid/T_Grid.T_Grid"',None,Texture2D'"/Engine/EngineMaterials/DefaultDiffuse.DefaultDiffuse"'),FunctionInfos=((StateId=B7C71B914E2BB667772D6CBE2AB55665,Function=MaterialFunction'"/Engine/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.LinearGradient"'),(StateId=1F3C7ECC4653CAFB2A6AEE82B1F2F3A5,Function=MaterialFunction'"/Engine/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.CheapContrast"'),(StateId=B7C71B914E2BB667772D6CBE2AB55665,Function=MaterialFunction'"/Engine/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.LinearGradient"'),(StateId=1F3C7ECC4653CAFB2A6AEE82B1F2F3A5,Function=MaterialFunction'"/Engine/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.CheapContrast"'),(StateId=BDC7AB9C418E30AC5815BFB01EF022E9,Function=MaterialFunction'"/Engine/Functions/Engine_MaterialFunctions01/Texturing/WorldAlignedTexture.WorldAlignedTexture"')),QualityLevelsUsed=(False,False,False,False))
+   ReferencedTextureGuids(0)=01A3E1BA488F3620AB8FEEB43194629D
+   ThumbnailInfo=SceneThumbnailInfoWithPrimitive'"SceneThumbnailInfoWithPrimitive_0"'
+   ParameterOverviewExpansion=(("-12Global", True))
+   LightingGuid=92F4723E47163F62BF5EE0A007B656B5
+End Object
